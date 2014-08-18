@@ -1,0 +1,6 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Database>
+<Url>jdbc:mysql://127.0.0.1:3306/</Url>
+<Username>root</Username>
+<Password></Password>
+</Database>

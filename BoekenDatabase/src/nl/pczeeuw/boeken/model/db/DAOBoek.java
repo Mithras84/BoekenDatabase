@@ -122,7 +122,7 @@ public class DAOBoek implements IBoekDAO {
 		boek.setAuteur(res.getString(3));
 		boek.setPrijs(res.getDouble(4));
 		boek.setGenre(res.getString(5));
-		boek.setPrijs(res.getInt(6));
+		boek.setPaginas(res.getInt(6));
 	    }
 	} catch (SQLException e) {
 	    e.printStackTrace();
@@ -156,7 +156,7 @@ public class DAOBoek implements IBoekDAO {
 		boek.setAuteur(res.getString(3));
 		boek.setPrijs(res.getDouble(4));
 		boek.setGenre(res.getString(5));
-		boek.setPrijs(res.getInt(6));
+		boek.setPaginas(res.getInt(6));
 		boeken.add( boek );
 	    }
 	} catch (SQLException e) {
@@ -190,7 +190,7 @@ public class DAOBoek implements IBoekDAO {
 		boek.setAuteur(res.getString(3));
 		boek.setPrijs(res.getDouble(4));
 		boek.setGenre(res.getString(5));
-		boek.setPrijs(res.getInt(6));
+		boek.setPaginas(res.getInt(6));
 		boeken.add( boek );
 	    }
 	} catch (SQLException e) {
@@ -223,7 +223,7 @@ public class DAOBoek implements IBoekDAO {
 		boek.setAuteur(res.getString(3));
 		boek.setPrijs(res.getDouble(4));
 		boek.setGenre(res.getString(5));
-		boek.setPrijs(res.getInt(6));
+		boek.setPaginas(res.getInt(6));
 		boeken.add( boek );
 	    }
 	} catch (SQLException e) {

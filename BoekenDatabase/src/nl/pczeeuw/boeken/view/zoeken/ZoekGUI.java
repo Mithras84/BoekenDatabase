@@ -7,6 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -20,6 +22,7 @@ import javax.swing.JTextField;
 import nl.pczeeuw.boeken.controller.ZoekListener;
 import nl.pczeeuw.boeken.model.BoekZoeker;
 import nl.pczeeuw.boeken.model.beans.Boek;
+import nl.pczeeuw.boeken.view.BoekInfo;
 
 /**
  * Class description
@@ -81,6 +84,7 @@ public class ZoekGUI {
 	alleBoekenKnop.addActionListener(btnListener);
 	
 	zoekLijst = new JList<Boek>(result);
+	zoekLijst.addMouseListener(new LijstListener () );
 	
 	infoLabel = new JLabel ();
 	
@@ -210,6 +214,52 @@ public class ZoekGUI {
 	    }
 	}
 	
+    }
+    
+    private class LijstListener implements MouseListener {
+	
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            
+            if (e.getSource() instanceof JList<?>) {
+        	@SuppressWarnings("unchecked")
+		JList<Boek> list = (JList<Boek>)e.getSource();
+        	if (e.getClickCount() == 2) {
+            		new BoekInfo( list.getSelectedValue() );
+                }
+            }
+            
+            
+        }
+    
+    
+        @Override
+        public void mouseEntered(MouseEvent arg0) {
+    	// TODO Auto-generated method stub
+    	
+        }
+    
+    
+        @Override
+        public void mouseExited(MouseEvent arg0) {
+    	// TODO Auto-generated method stub
+    	
+        }
+    
+    
+        @Override
+        public void mousePressed(MouseEvent arg0) {
+    	// TODO Auto-generated method stub
+    	
+        }
+    
+    
+        @Override
+        public void mouseReleased(MouseEvent arg0) {
+    	// TODO Auto-generated method stub
+    	
+        }
     }
     
 }

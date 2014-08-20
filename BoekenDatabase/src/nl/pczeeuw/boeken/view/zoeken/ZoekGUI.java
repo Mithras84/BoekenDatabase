@@ -22,7 +22,6 @@ import javax.swing.JTextField;
 import nl.pczeeuw.boeken.controller.ZoekListener;
 import nl.pczeeuw.boeken.model.BoekZoeker;
 import nl.pczeeuw.boeken.model.beans.Boek;
-import nl.pczeeuw.boeken.view.BoekInfo;
 
 /**
  * Class description
